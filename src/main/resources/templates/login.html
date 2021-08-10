@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Inscription</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          rel="stylesheet">
+</head>
+<body>
+<div class="container text-center">
+    <div>
+        <h1>Veuillez incrire ici</h1>
+    </div>
+
+    <form th:action="@{/logger}" method="post"
+          style="max-width: 600px; margin: 0 auto;"
+          th:object="${user}"
+    >
+        <div class="form-group row">
+            <label class="col-form-label col-4">E-mail</label>
+            <div class="col-8">
+                <input type="email" class="form-control" th:field="*{email}" required/>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-form-label col-4">Mot de passe</label>
+            <div class="col-8">
+                <input type="password" class="form-control" th:field="*{pass}" required/>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-8">
+                <input type="submit" value="Connecter" class="btn btn-primary"/>
+            </div>
+        </div>
+
+</form>
+</div>
+</body>
+</html>

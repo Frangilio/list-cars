@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Page d'accueil</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          rel="stylesheet">
+</head>
+<body>
+<div class="container text-center">
+    <div>
+        <h1>Bienvevue sur notre page</h1>
+    </div>
+    <div>
+        <h3><a th:href="@{/list_cars}">Liste des voitures</a></h3>
+        <h3><a th:href="@{/register}">S'inscrire</a></h3>
+        <h3><a th:href="@{/login}">Se connecter</a></h3>
+    </div>
+</div>
+</body>
+</html>
